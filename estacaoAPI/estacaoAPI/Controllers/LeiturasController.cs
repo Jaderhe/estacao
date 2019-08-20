@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using estacaoAPI.Models;
+using estacaoAPI.DTO;
 
 namespace estacaoAPI.Controllers
 {
@@ -83,8 +84,16 @@ namespace estacaoAPI.Controllers
 
         // POST: api/Leituras
         [HttpPost]
-        public async Task<IActionResult> PostLeitura([FromBody] Leitura leitura)
+        public async Task<IActionResult> PostLeitura([FromBody] LeituraDTO leituraDTO)
         {
+
+            Leitura leitura = new Leitura();
+            leitura.Data = System.DateTime.Now;
+            leitura.Hash = leituraDTO.Hash;
+            leitura.Temp = leituraDTO.Temp;
+            leitura.Umid = leituraDTO.Umid;
+            leitura.Veloc = leituraDTO.Veloc;
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
