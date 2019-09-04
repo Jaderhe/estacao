@@ -41,7 +41,7 @@ namespace estacaoAPI
             {
                 c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
                 {
-                    Title = "InfoAlmox API",
+                    Title = "Estação API",
                     Version = "v1",
                     Contact = new Contact { Name = "Jader H Anschau", Email = "jaderhericks@gmail.com", Url = "https://github.com/jaderhe" }
                 });

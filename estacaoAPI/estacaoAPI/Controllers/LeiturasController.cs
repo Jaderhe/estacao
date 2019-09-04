@@ -87,6 +87,11 @@ namespace estacaoAPI.Controllers
         public async Task<IActionResult> PostLeitura([FromBody] LeituraDTO leituraDTO)
         {
 
+            if ( (string.Compare("6e1bbb5671b2dd6de8292c8374a1c01a", leituraDTO.Hash, false) != 0) )
+            {
+                return BadRequest(ModelState);
+            }
+
             Leitura leitura = new Leitura();
             leitura.Data = System.DateTime.Now;
             leitura.Hash = leituraDTO.Hash;
