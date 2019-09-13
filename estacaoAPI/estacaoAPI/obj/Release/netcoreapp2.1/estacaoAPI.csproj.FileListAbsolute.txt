@@ -1,0 +1,14 @@
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\bin\Release\netcoreapp2.1\estacaoAPI.deps.json
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\bin\Release\netcoreapp2.1\estacaoAPI.runtimeconfig.json
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\bin\Release\netcoreapp2.1\estacaoAPI.runtimeconfig.dev.json
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\bin\Release\netcoreapp2.1\estacaoAPI.dll
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\bin\Release\netcoreapp2.1\estacaoAPI.pdb
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\obj\Release\netcoreapp2.1\estacaoAPI.csprojAssemblyReference.cache
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\obj\Release\netcoreapp2.1\estacaoAPI.csproj.CoreCompileInputs.cache
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\obj\Release\netcoreapp2.1\estacaoAPI.RazorAssemblyInfo.cache
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\obj\Release\netcoreapp2.1\estacaoAPI.RazorAssemblyInfo.cs
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\obj\Release\netcoreapp2.1\estacaoAPI.AssemblyInfoInputs.cache
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\obj\Release\netcoreapp2.1\estacaoAPI.AssemblyInfo.cs
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\obj\Release\netcoreapp2.1\estacaoAPI.RazorTargetAssemblyInfo.cache
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\obj\Release\netcoreapp2.1\estacaoAPI.dll
+C:\Projetos\estacao\estacaoAPI\estacaoAPI\obj\Release\netcoreapp2.1\estacaoAPI.pdb
