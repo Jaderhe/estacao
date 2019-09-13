@@ -100,6 +100,7 @@ namespace estacaoAPI.Controllers
             veloc = (((4 * pi * 147 * rpm) / 60) / 1000) * (decimal)3.6;
             veloc = Decimal.Round(veloc, 2);
 
+
             Leitura leitura = new Leitura();
             leitura.Data = System.DateTime.Now;
             leitura.Hash = leituraDTO.Hash;
