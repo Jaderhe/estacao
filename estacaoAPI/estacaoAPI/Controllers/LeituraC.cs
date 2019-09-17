@@ -47,6 +47,41 @@ namespace estacaoAPI.Controllers
             return Ok(leitura);
         }
 
+        
+        // GET: api/LeituraC
+        [HttpGet("post")]
+        public async Task<IActionResult> GetLeitura([FromQuery] String hash, [FromQuery] int veloc, [FromQuery] int umid, [FromQuery] int temp )
+        {
+            if ((string.Compare("6e1bbb5671b2dd6de8292c8374a1c01a", hash, false) != 0))
+            {
+                return BadRequest(ModelState);
+            }
+
+            decimal umidade, temperatura, rpm, velocidade = 0;
+            decimal pi = (decimal)3.14159265;
+            umidade = umid / 10;
+            temperatura = temp / 10;
+            rpm = (veloc * 60) / 10;
+            velocidade = (((4 * pi * 147 * rpm) / 60) / 1000) * (decimal)3.6;
+            velocidade = Decimal.Round(velocidade, 2);
+
+
+            Leitura leitura = new Leitura();
+            leitura.Data = System.DateTime.Now;
+            leitura.Hash = hash;
+            leitura.Temp = temperatura;
+            leitura.Umid = umidade;
+            leitura.Veloc = velocidade;
+
+
+            _context.Leitura.Add(leitura);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetLeitura", new { id = leitura.IdLeitura }, leitura);
+            
+        }
+
+        
         // PUT: api/LeituraC/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutLeitura([FromRoute] int id, [FromBody] Leitura leitura)
@@ -96,7 +131,7 @@ namespace estacaoAPI.Controllers
             decimal pi = (decimal)3.14159265;
             umid = leituraDTO.Umid / 10;
             temp = leituraDTO.Temp / 10;
-            rpm = (leituraDTO.Veloc * 60) / 5;
+            rpm = (leituraDTO.Veloc * 60) / 10;
             veloc = (((4 * pi * 147 * rpm) / 60) / 1000) * (decimal)3.6;
             veloc = Decimal.Round(veloc, 2);
 
